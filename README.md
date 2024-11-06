@@ -8,11 +8,11 @@ O objetivo deste projeto é desenvolver uma API que permite operações CRUD (Cr
 * Java com Spring Boot
 * Banco de Dados: MySql (ou substitua pelo que estiver usando)
 * Maven para gerenciamento de dependências
-Funcionalidades Implementadas
-Na primeira semana, focamos em:
+
 
 ## 📜 Criação do Modelo de Vídeo:
-
+Funcionalidades Implementadas
+Na primeira semana, focamos em:
 Criamos uma classe Video que representa o modelo de dados para armazenar informações dos vídeos.
 O modelo inclui atributos como título, descrição, URL e outras informações necessárias.
 Repository:

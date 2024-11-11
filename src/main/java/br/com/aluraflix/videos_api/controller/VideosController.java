@@ -48,4 +48,11 @@ public class VideosController {
         return service.deletarPorId(id);
     }
 
+    @GetMapping
+    public ResponseEntity buscarVideoPorTitulo(@RequestParam(name = "search",required = false) String titulo){
+        return service.buscarVideoPorTitulo(titulo);
+    }
+
+
+
 }

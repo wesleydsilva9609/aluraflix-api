@@ -7,4 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VideoRepository extends JpaRepository<Video,Long> {
     Page<Video> findAllByAtivoTrue(Pageable pageable);
+
+
+    Video findByTituloContainingIgnoreCase(String titulo);
 }

@@ -3,6 +3,7 @@ package br.com.aluraflix.videos_api.controller;
 import br.com.aluraflix.videos_api.model.categoria.DadosCadastroCategoria;
 import br.com.aluraflix.videos_api.model.categoria.DadosCategoriaAtualizada;
 import br.com.aluraflix.videos_api.model.categoria.DadosListagemCategoria;
+import br.com.aluraflix.videos_api.model.video.DadosListagemVideo;
 import br.com.aluraflix.videos_api.service.CategoriaService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/categoria")
@@ -47,5 +50,15 @@ public class CategoriaController {
     public ResponseEntity deletarPorId(@PathVariable Long id){
         return service.deletarPorId(id);
     }
+
+    @GetMapping("/{id}/videos")
+    public ResponseEntity <List<DadosListagemVideo>> buscarVideosPorCategoria(@PathVariable Long id){
+        return service.buscarVideosPorCategoria(id);
+    }
+
+
+
+
+
 
 }

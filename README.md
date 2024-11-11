@@ -26,4 +26,8 @@ Controllers e Rotas:
 * PUT: Atualiza as informações de um vídeo existente
 * DELETE: Remove um vídeo do banco de dados
 
+* Na segunda semana do Desafio Alura, foram implementadas funcionalidades essenciais para o avanço do projeto. Nesta etapa, foi criado o modelo de Categoria, incluindo os métodos GET, PUT, POST e DELETE, possibilitando a manipulação completa dos dados de categorias. Além disso, foi realizada a relação entre Vídeo e Categoria, permitindo uma associação eficiente e estruturada entre essas entidades.
+
+Como parte do processo, também foram desenvolvidos alguns testes automatizados, assegurando a qualidade e a correta funcionalidade dos métodos implementados. Essa série de aprimoramentos reforça a arquitetura do projeto e contribui para a entrega de uma aplicação mais robusta e confiável.
+
 

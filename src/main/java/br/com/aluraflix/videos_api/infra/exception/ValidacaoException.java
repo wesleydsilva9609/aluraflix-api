@@ -1,4 +1,4 @@
-package br.com.aluraflix.videos_api.infra;
+package br.com.aluraflix.videos_api.infra.exception;
 
 public class ValidacaoException extends RuntimeException {
 

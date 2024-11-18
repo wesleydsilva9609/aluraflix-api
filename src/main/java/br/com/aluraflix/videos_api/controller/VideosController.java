@@ -53,6 +53,11 @@ public class VideosController {
         return service.buscarVideoPorTitulo(titulo);
     }
 
+    @GetMapping("/free")
+    public ResponseEntity<Page<DadosListagemVideo>> listarVideosfree(@PageableDefault(size = 2,sort = "id")Pageable pageable){
+        return service.exibirTodosOsVideosAtivos(pageable);
+    }
+
 
 
 }

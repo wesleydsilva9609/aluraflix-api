@@ -1,5 +1,6 @@
-package br.com.aluraflix.videos_api.model.usuario;
+package br.com.aluraflix.videos_api.service;
 
+import br.com.aluraflix.videos_api.model.usuario.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

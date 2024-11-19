@@ -31,3 +31,10 @@ Controllers e Rotas:
 Como parte do processo, também foram desenvolvidos alguns testes automatizados, assegurando a qualidade e a correta funcionalidade dos métodos implementados. Essa série de aprimoramentos reforça a arquitetura do projeto e contribui para a entrega de uma aplicação mais robusta e confiável.
 
 
+* Na terceira semana do Desafio Alura, focamos em implementar um serviço de autenticação robusto utilizando o Auth0 e o conceito de JWT (JSON Web Token). Essa abordagem garantiu maior segurança e controle no acesso às funcionalidades da aplicação, permitindo a autenticação e autorização de usuários de forma prática e confiável.
+
+Além disso, desenvolvemos a funcionalidade de vídeos gratuitos, que podem ser acessados sem a necessidade de login ou autenticação. Essa implementação teve como objetivo ampliar o alcance da plataforma, oferecendo conteúdo acessível para todos os usuários, enquanto mantemos recursos exclusivos disponíveis apenas para aqueles que estão autenticados.
+
+Essas melhorias não apenas enriqueceram a experiência do usuário, mas também demonstraram a importância de equilibrar acessibilidade e segurança em uma aplicação moderna. Foi uma semana desafiadora e de grande aprendizado, consolidando conceitos importantes de autenticação e usabilidade.
+
+

@@ -35,6 +35,8 @@ Como parte do processo, também foram desenvolvidos alguns testes automatizados,
 
 Além disso, desenvolvemos a funcionalidade de vídeos gratuitos, que podem ser acessados sem a necessidade de login ou autenticação. Essa implementação teve como objetivo ampliar o alcance da plataforma, oferecendo conteúdo acessível para todos os usuários, enquanto mantemos recursos exclusivos disponíveis apenas para aqueles que estão autenticados.
 
+Foi implementado o Spring Docs no projeto, com o objetivo de proporcionar uma melhor visualização e organização da documentação da API. Essa integração permite que os desenvolvedores e demais stakeholders tenham acesso a uma interface amigável e interativa, facilitando o entendimento das funcionalidades disponíveis, dos endpoints, e dos parâmetros necessários para cada operação. Além disso, contribui para a padronização e a eficiência no desenvolvimento e manutenção do projeto.
+
 Essas melhorias não apenas enriqueceram a experiência do usuário, mas também demonstraram a importância de equilibrar acessibilidade e segurança em uma aplicação moderna. Foi uma semana desafiadora e de grande aprendizado, consolidando conceitos importantes de autenticação e usabilidade.
 
 

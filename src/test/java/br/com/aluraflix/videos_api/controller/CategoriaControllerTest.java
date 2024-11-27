@@ -11,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpServletResponse;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,6 +28,7 @@ class CategoriaControllerTest {
 
     @Test
     @DisplayName("deveria Retornar erro 400 se informção estiver incorreta")
+    @WithMockUser
     void cadastrarCategoriacaso1() throws Exception {
 
         var response = mvc.perform(post("/categoria").contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
@@ -36,6 +38,7 @@ class CategoriaControllerTest {
 
     @Test
     @DisplayName("deveria cadastrar categoria")
+    @WithMockUser
     void cadastrarCategoria() throws Exception {
 
         var json = """
@@ -51,6 +54,7 @@ class CategoriaControllerTest {
     }
 
     @Test
+    @WithMockUser
     void deveriaBuscarCategoriaPorId() throws Exception {
 
         var id = 1;
@@ -61,6 +65,7 @@ class CategoriaControllerTest {
     }
 
     @Test
+    @WithMockUser
     void deveriaListarCategoria() throws Exception {
         MockHttpServletResponse response = mvc.perform(get("/categoria").contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
 
@@ -68,6 +73,7 @@ class CategoriaControllerTest {
     }
 
     @Test
+    @WithMockUser
     void deveriaDeletarCategoriaPorId() throws Exception {
 
         var id = 1;
@@ -78,6 +84,7 @@ class CategoriaControllerTest {
     }
 
     @Test
+    @WithMockUser
     void deveriaAtualizarCategoria() throws Exception {
 
         var json = """
@@ -93,6 +100,7 @@ class CategoriaControllerTest {
     }
 
     @Test
+    @WithMockUser
     void deveriaBuscarVideoPorCategoria() throws Exception {
         var id = 1;
 

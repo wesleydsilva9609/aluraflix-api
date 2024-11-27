@@ -13,6 +13,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +32,7 @@ class VideosControllerTest {
 
     @Test
     @DisplayName("deveria Retornar erro 400 se informção estiver incorreta")
+    @WithMockUser
     void cadastrarVideoacaso1() throws Exception {
 
         var response = mvc.perform(post("/videos").contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
@@ -40,6 +42,7 @@ class VideosControllerTest {
 
     @Test
     @DisplayName("deveria cadastrar o video")
+    @WithMockUser
     void cadastrarVideo() throws Exception {
         var json = """
                 {	
@@ -56,6 +59,7 @@ class VideosControllerTest {
     }
 
     @Test
+    @WithMockUser
     void BuscarVideoPorId() throws Exception {
         var id = 1;
         var response = mvc.perform(get("/videos/{id}",id).contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
@@ -63,6 +67,7 @@ class VideosControllerTest {
     }
 
     @Test
+    @WithMockUser
     void listarVideos() throws Exception {
 
         var response = mvc.perform(get("/videos/").contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
@@ -70,6 +75,7 @@ class VideosControllerTest {
     }
 
     @Test
+    @WithMockUser
     void DeletarVideoPorId() throws Exception {
         var id = 1;
         var response = mvc.perform(delete("/videos/{id}",id).contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();
@@ -77,6 +83,7 @@ class VideosControllerTest {
     }
 
     @Test
+    @WithMockUser
     void atualizarVideo() throws Exception {
         var json = """
                 {	
@@ -93,6 +100,7 @@ class VideosControllerTest {
     }
 
     @Test
+    @WithMockUser
     void buscarVideoPorNome() throws Exception {
         var titulo = "nirvana";
         var response = mvc.perform(get("/videos/?search=",titulo).contentType(MediaType.APPLICATION_JSON)).andReturn().getResponse();

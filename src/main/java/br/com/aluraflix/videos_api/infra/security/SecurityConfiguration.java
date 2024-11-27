@@ -25,7 +25,7 @@ public class SecurityConfiguration {
         return httpSecurity.csrf(csrf -> csrf.disable())
                 .sessionManagement(ssm -> ssm.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).authorizeHttpRequests(rqs ->{
                     rqs.requestMatchers("videos/free").permitAll();
-                    rqs.requestMatchers("/v3/api-docs/**","/swagger-ui.html","swagger-ui/**","18.116.69.146:8080/").permitAll();
+                    rqs.requestMatchers("/v3/api-docs/**","/swagger-ui.html","swagger-ui/**","aluraflix-api-inky.vercel.app").permitAll();
                 }).authorizeHttpRequests(rqs -> {
                     rqs.requestMatchers("/login").permitAll();
                     rqs.anyRequest().authenticated();
